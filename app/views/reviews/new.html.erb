@@ -1,5 +1,11 @@
-<%= form_for [@restaurant, @review] do |f| %> # post on restaurant_reviews_path
+<div class="text-center">
+
+<%= form_for [@restaurant, @review] do |f| %>
+  <%= f.label :content %>
   <%= f.text_field :content %>
+  <%= f.label :rating %>
   <%= f.text_field :rating %>
   <%= f.submit "add a review" %>
 <% end %>
+
+</div>

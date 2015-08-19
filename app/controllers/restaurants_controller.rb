@@ -15,15 +15,11 @@ class RestaurantsController < ApplicationController
   def create
     @restaurant = Restaurant.new(restaurant_params)
     @restaurant.save ? (redirect_to restaurant_path(@restaurant.id)) : (render :new)
-
-
   end
 
   private
 
   def restaurant_params
-    # *Strong params*: You need to *whitelist* what can be updated by the user
-    # Never trust user data!
     params.require(:restaurant).permit(:name, :address, :category)
   end
 
