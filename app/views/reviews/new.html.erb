@@ -1,2 +1,5 @@
-<h1>Reviews#new</h1>
-<p>Find me in app/views/reviews/new.html.erb</p>
+<%= form_for [@restaurant, @review] do |f| %> # post on restaurant_reviews_path
+  <%= f.text_field :content %>
+  <%= f.text_field :rating %>
+  <%= f.submit "add a review" %>
+<% end %>
