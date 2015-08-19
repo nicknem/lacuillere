@@ -1,0 +1,15 @@
+<div class="text-center">
+
+  <h1><%= @restaurant.name %></h1>
+  <p>Category: <%= @restaurant.category %> restaurant</p>
+  <p>Address: <%= @restaurant.address %> </p>
+
+</div>
+
+<!-- Afficher reviews where id == restaurant id-->
+
+
+<div class="text-center">
+  <h3><%= link_to "Leave a review!", new_restaurant_review_path(@restaurant)%> </h3>
+  <h3><%= link_to "Back to Menu", restaurants_path%> </h3>
+</div>
