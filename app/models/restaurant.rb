@@ -5,5 +5,6 @@ class Restaurant < ActiveRecord::Base
   validates :category, inclusion: { in: ["chinese", "italian", "japanese", "french", "belgian"], allow_nil: false}
 
 
+
 end
 
