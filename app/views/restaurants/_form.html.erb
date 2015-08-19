@@ -1,9 +1,17 @@
-<%= form_for(@restaurant) do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
-  <%= f.label :address %>
-  <%= f.text_field :address %>
-  <%= f.label :category %>
-  <%= f.text_field :category %>
-  <%= f.submit %>
-<% end %>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-xs-12 col-md-4"></div>
+    <div class="col-xs-12 col-md-4">
+    <h2>Create a restaurant</h2>
+      <%= simple_form_for(@restaurant) do |f| %>
+        <%= f.input :name %>
+        <%= f.input :address %>
+        <%= f.input :category %>
+        <%= f.button :submit %>
+      <% end %>
+    </div>
+    <div class="col-xs-12 col-md-4"></div>
+  </div>
+</div>
+
+`
